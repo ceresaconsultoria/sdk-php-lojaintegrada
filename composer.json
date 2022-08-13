@@ -1,0 +1,32 @@
+{
+    "name": "ceresaconsultoria/sdk-php-lojaintegrada",
+    "description": "SDK PHP >=7.4 da Api da Loja Integrada",
+    "keywords": ["api", "library", "psr-4", "lojaintegrada", "sdk"],
+    "homepage": "https://github.com/ceresaconsultoria/sdk-php-lojaintegrada",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Weslley Ceresa",
+            "email": "ceresaconsultoria@gmail.com",
+            "homepage": "https://www.mobilestores.app"
+        }
+    ],
+    "require": {
+        "php": ">=7.4",
+        "guzzlehttp/guzzle": "^7"
+    },
+    "autoload": {
+        "psr-4": {
+            "LI\\": "src/"
+        }
+    },
+    "scripts": {
+        "test": []
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require-dev": {
+        "victorjonsson/markdowndocs": "^1.3"
+    }
+}
