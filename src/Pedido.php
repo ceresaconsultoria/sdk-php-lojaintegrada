@@ -46,6 +46,9 @@ class Pedido extends LIController{
                 throw LIException::fromObjectMessage($bodyDecoded->error_response, 500, $ex->getPrevious());
                 
             }
+            else{
+                throw LIException::fromObjectMessage($body, 500, $ex->getPrevious());    
+            }
                         
         } catch (ClientException $ex) {
             
@@ -58,6 +61,9 @@ class Pedido extends LIController{
                 throw LIException::fromObjectMessage($bodyDecoded->error_response, 400, $ex->getPrevious());
                 
             }
+            else{
+                throw LIException::fromObjectMessage($body, 400, $ex->getPrevious());    
+            }
             
         } catch (BadResponseException $ex) {
             
@@ -69,6 +75,9 @@ class Pedido extends LIController{
                 
                 throw LIException::fromObjectMessage($bodyDecoded->error_response, 400, $ex->getPrevious());
                 
+            }
+            else{
+                throw LIException::fromObjectMessage($body, 400, $ex->getPrevious());    
             }
             
         } catch (Exception $ex) {
@@ -104,6 +113,9 @@ class Pedido extends LIController{
                 throw LIException::fromObjectMessage($bodyDecoded->error_response, 500, $ex->getPrevious());
                 
             }
+            else{
+                throw LIException::fromObjectMessage($body, 500, $ex->getPrevious());    
+            }
                         
         } catch (ClientException $ex) {
             
@@ -116,6 +128,9 @@ class Pedido extends LIController{
                 throw LIException::fromObjectMessage($bodyDecoded->error_response, 400, $ex->getPrevious());
                 
             }
+            else{
+                throw LIException::fromObjectMessage($body, 400, $ex->getPrevious());    
+            }
             
         } catch (BadResponseException $ex) {
             
@@ -127,6 +142,9 @@ class Pedido extends LIController{
                 
                 throw LIException::fromObjectMessage($bodyDecoded->error_response, 400, $ex->getPrevious());
                 
+            }
+            else{
+                throw LIException::fromObjectMessage($body, 400, $ex->getPrevious());    
             }
             
         } catch (Exception $ex) {
@@ -162,6 +180,9 @@ class Pedido extends LIController{
                 throw LIException::fromObjectMessage($bodyDecoded->error_response, 500, $ex->getPrevious());
                 
             }
+            else{
+                throw LIException::fromObjectMessage($body, 500, $ex->getPrevious());    
+            }
                         
         } catch (ClientException $ex) {
             
@@ -174,6 +195,9 @@ class Pedido extends LIController{
                 throw LIException::fromObjectMessage($bodyDecoded->error_response, 400, $ex->getPrevious());
                 
             }
+            else{
+                throw LIException::fromObjectMessage($body, 400, $ex->getPrevious());    
+            }
             
         } catch (BadResponseException $ex) {
             
@@ -185,6 +209,9 @@ class Pedido extends LIController{
                 
                 throw LIException::fromObjectMessage($bodyDecoded->error_response, 400, $ex->getPrevious());
                 
+            }
+            else{
+                throw LIException::fromObjectMessage($body, 400, $ex->getPrevious());    
             }
             
         } catch (Exception $ex) {
@@ -220,6 +247,9 @@ class Pedido extends LIController{
                 throw LIException::fromObjectMessage($bodyDecoded->error_response, 500, $ex->getPrevious());
                 
             }
+            else{
+                throw LIException::fromObjectMessage($body, 500, $ex->getPrevious());    
+            }
                         
         } catch (ClientException $ex) {
             
@@ -232,6 +262,9 @@ class Pedido extends LIController{
                 throw LIException::fromObjectMessage($bodyDecoded->error_response, 400, $ex->getPrevious());
                 
             }
+            else{
+                throw LIException::fromObjectMessage($body, 400, $ex->getPrevious());    
+            }
             
         } catch (BadResponseException $ex) {
             
@@ -243,6 +276,9 @@ class Pedido extends LIController{
                 
                 throw LIException::fromObjectMessage($bodyDecoded->error_response, 400, $ex->getPrevious());
                 
+            }
+            else{
+                throw LIException::fromObjectMessage($body, 400, $ex->getPrevious());    
             }
             
         } catch (Exception $ex) {
@@ -278,6 +314,9 @@ class Pedido extends LIController{
                 throw LIException::fromObjectMessage($bodyDecoded->error_response, 500, $ex->getPrevious());
                 
             }
+            else{
+                throw LIException::fromObjectMessage($body, 500, $ex->getPrevious());    
+            }
                         
         } catch (ClientException $ex) {
             
@@ -290,6 +329,9 @@ class Pedido extends LIController{
                 throw LIException::fromObjectMessage($bodyDecoded->error_response, 400, $ex->getPrevious());
                 
             }
+            else{
+                throw LIException::fromObjectMessage($body, 400, $ex->getPrevious());    
+            }
             
         } catch (BadResponseException $ex) {
             
@@ -301,6 +343,9 @@ class Pedido extends LIController{
                 
                 throw LIException::fromObjectMessage($bodyDecoded->error_response, 400, $ex->getPrevious());
                 
+            }
+            else{
+                throw LIException::fromObjectMessage($body, 400, $ex->getPrevious());    
             }
             
         } catch (Exception $ex) {
@@ -335,6 +380,9 @@ class Pedido extends LIController{
                 throw LIException::fromObjectMessage($bodyDecoded->error_response, 500, $ex->getPrevious());
                 
             }
+            else{
+                throw LIException::fromObjectMessage($body, 500, $ex->getPrevious());    
+            }
                         
         } catch (ClientException $ex) {
             
@@ -347,6 +395,9 @@ class Pedido extends LIController{
                 throw LIException::fromObjectMessage($bodyDecoded->error_response, 400, $ex->getPrevious());
                 
             }
+            else{
+                throw LIException::fromObjectMessage($body, 400, $ex->getPrevious());    
+            }
             
         } catch (BadResponseException $ex) {
             
@@ -358,6 +409,9 @@ class Pedido extends LIController{
                 
                 throw LIException::fromObjectMessage($bodyDecoded->error_response, 400, $ex->getPrevious());
                 
+            }
+            else{
+                throw LIException::fromObjectMessage($body, 400, $ex->getPrevious());    
             }
             
         } catch (Exception $ex) {
@@ -392,6 +446,9 @@ class Pedido extends LIController{
                 throw LIException::fromObjectMessage($bodyDecoded->error_response, 500, $ex->getPrevious());
                 
             }
+            else{
+                throw LIException::fromObjectMessage($body, 500, $ex->getPrevious());    
+            }
                         
         } catch (ClientException $ex) {
             
@@ -404,6 +461,9 @@ class Pedido extends LIController{
                 throw LIException::fromObjectMessage($bodyDecoded->error_response, 400, $ex->getPrevious());
                 
             }
+            else{
+                throw LIException::fromObjectMessage($body, 400, $ex->getPrevious());    
+            }
             
         } catch (BadResponseException $ex) {
             
@@ -415,6 +475,9 @@ class Pedido extends LIController{
                 
                 throw LIException::fromObjectMessage($bodyDecoded->error_response, 400, $ex->getPrevious());
                 
+            }
+            else{
+                throw LIException::fromObjectMessage($body, 400, $ex->getPrevious());    
             }
             
         } catch (Exception $ex) {
