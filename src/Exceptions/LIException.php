@@ -42,12 +42,12 @@ class LIException extends Exception{
 
                 }                           
             
-            return new YPException( new Exception(implode("\n", $newMessageString), $code, $previous) );     
+            return new LIException( new Exception(implode("\n", $newMessageString), $code, $previous) );     
         }
         
         if(is_string($message)){
             
-            return new YPException( new Exception($message, $code, $previous) );     
+            return new LIException( new Exception($message, $code, $previous) );     
             
         }
         
