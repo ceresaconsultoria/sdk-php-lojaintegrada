@@ -24,10 +24,7 @@ class LIException extends Exception{
     
     public static function fromObjectMessage($message, $code, $previous = null){
         
-        if(is_object($message)){
-            
-            var_dump([get_class($message), \GuzzleHttp\Exception\ClientException::class]);
-            
+        if(is_object($message)){            
             if(get_class($message) == \GuzzleHttp\Exception\ClientException::class){
                 $body = (string)$message->getResponse()->getBody();
             
@@ -36,6 +33,8 @@ class LIException extends Exception{
                 if(isset($bodyDecoded->error_response)){
                     return self::process($bodyDecoded->error_response, $code, $previous);
                 }
+                
+                return self::process($message->getMessage(), $code, $previous);
             }
             
             return self::process($message, $code, $previous);
