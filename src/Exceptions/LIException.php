@@ -25,7 +25,29 @@ class LIException extends Exception{
     public static function fromObjectMessage($message, $code, $previous = null){
         
         if(is_object($message)){
+            if($message instanceof \GuzzleHttp\Exception\ClientException){
+                $body = (string)$message->getResponse()->getBody();
             
+                $bodyDecoded = json_decode($body);
+                
+                if(isset($bodyDecoded->error_response)){
+                    return self::process($bodyDecoded->error_response, $code, $previous);
+                }
+            }
+            
+            return self::process($message, $code, $previous);
+        }
+        
+        if(is_string($message)){
+            
+            return self::process($message, $code, $previous);
+            
+        }
+        
+    }
+    
+    private static function process($message, $code, $previous = null){
+        if(is_object($message)){
             $newMessageString = [];
             
             if(isset($message->general_errors))
@@ -42,15 +64,12 @@ class LIException extends Exception{
 
                 }                           
             
-            return new LIException( new Exception(implode("\n", $newMessageString), $code, $previous) );     
+            throw new LIException( new Exception(implode("\n", $newMessageString), $code, $previous) );     
         }
         
         if(is_string($message)){
-            
-            return new LIException( new Exception($message, $code, $previous) );     
-            
+            throw new LIException( new Exception($message, $code, $previous) );     
         }
-        
     }
     
 }
