@@ -25,7 +25,7 @@ class LIException extends Exception{
     public static function fromObjectMessage($message, $code, $previous = null){
         
         if(is_object($message)){
-            if($message instanceof \GuzzleHttp\Exception\ClientException){
+            if($code == 400){
                 $body = (string)$message->getResponse()->getBody();
             
                 $bodyDecoded = json_decode($body);
