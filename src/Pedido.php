@@ -186,18 +186,7 @@ class Pedido extends LIController{
                         
         } catch (ClientException $ex) {
             
-            $body = (string)$ex->getResponse()->getBody();
-            
-            $bodyDecoded = json_decode($body);
-            
-            if(isset($bodyDecoded->error_response)){
-                
-                throw LIException::fromObjectMessage($bodyDecoded->error_response, 400, $ex->getPrevious());
-                
-            }
-            else{
-                throw LIException::fromObjectMessage($body, 400, $ex->getPrevious());    
-            }
+            throw LIException::fromObjectMessage($ex, 400, $ex->getPrevious());   
             
         } catch (BadResponseException $ex) {
             

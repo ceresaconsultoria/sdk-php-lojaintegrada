@@ -50,25 +50,27 @@ class LIException extends Exception{
         if(is_object($message)){
             $newMessageString = [];
             
-            if(isset($message->general_errors))
+            if(isset($message->general_errors)){
                 foreach($message->general_errors as $error){
 
                     $newMessageString[] =  $error->message;
 
-                }                           
+                } 
+            }                          
             
-            if(isset($message->validation_errors))
+            if(isset($message->validation_errors)){
                 foreach($message->validation_errors as $error){
 
                     $newMessageString[] =  $error->message_complete;
 
-                }                           
+                }
+            }                           
             
-            throw new LIException( new Exception(implode("\n", $newMessageString), $code, $previous) );     
+            return new LIException( new Exception(implode("\n", $newMessageString), $code, $previous) );     
         }
         
         if(is_string($message)){
-            throw new LIException( new Exception($message, $code, $previous) );     
+            return new LIException( new Exception($message, $code, $previous) );     
         }
     }
     
