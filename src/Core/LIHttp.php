@@ -19,6 +19,7 @@ class LIHttp {
     protected Client $http;
     protected $config;
 
+    const BASE_DOMAIN = "https://api.awsli.com.br/";
     const BASE_URL = "https://api.awsli.com.br/v1/";
            
     public function __construct(array $config = []) {        

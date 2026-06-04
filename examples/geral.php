@@ -6,11 +6,20 @@ ini_set('display_errors', 1);
 
 require __DIR__ . "/../vendor/autoload.php";
 
-$item = new LI\Cliente();
+$item = new LI\Webhook();
 
 $item->setApiKey('')
     ->setAppKey('');
 
-$items = $item->listarTodas();
+$data = [
+    'notifyUrl' => '',
+    'token' => '',
+];
+
+$items = $item->cadastrarProduto($data);
+
+\LI\Helper\LIHelper::dump($items);
+
+$items = $item->deletarProduto($data);
 
 \LI\Helper\LIHelper::dump($items);
